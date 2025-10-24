@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: ebook-frontend
+    env: static
+    buildCommand: npm run build
+    staticPublishPath: eBookCreator/dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
